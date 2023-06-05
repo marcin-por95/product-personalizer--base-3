@@ -14,6 +14,15 @@ const Product = props => {
   const selectedSizeOpt = sizes.find((size) => size.name === selectedSize)
 
   const totalPrice = basePrice + (selectedSizeOpt ? selectedSizeOpt.additionalPrice : 0);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Summary');
+    console.log('=========');
+    console.log('Name:', title);
+    console.log('TotalPrice:', totalPrice);
+    console.log('Size:', selectedSizeOpt.name);
+    console.log('Color:', selectedColor);
+  };
 
   return (
     <article className={styles.product}>
@@ -63,7 +72,7 @@ const Product = props => {
               ))}
             </ul>
           </div>
-          <Button className={styles.button}>
+          <Button className={styles.button} onClick={handleSubmit}>
             <span className="fa fa-shopping-cart" />
           </Button>
         </form>
