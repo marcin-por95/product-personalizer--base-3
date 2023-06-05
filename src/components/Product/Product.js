@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Button from '../Button/Button';
 
 const Product = props => {
+  const { title, basePrice } = props;
   return (
     <article className={styles.product}>
       <div className={styles.imageContainer}>
@@ -13,8 +14,8 @@ const Product = props => {
       </div>
       <div>
         <header>
-          <h2 className={styles.name}>Kodilla shirt</h2>
-          <span className={styles.price}>Price: 20$</span>
+          <h2 className={styles.name}>{title}</h2>
+          <span className={styles.price}>Price: {basePrice}$</span>
         </header>
         <form>
           <div className={styles.sizes}>
