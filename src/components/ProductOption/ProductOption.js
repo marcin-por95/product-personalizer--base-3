@@ -16,7 +16,7 @@ const ProductOption = ({
         <form>
             <SizeOption
                 sizes={sizes}
-                selectedSize={selectedSize.name}
+                selectedSize={selectedSize}
                 setSelectedSize={setSelectedSize}
             />
             <ColorOption
